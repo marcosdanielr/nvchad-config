@@ -17,8 +17,8 @@ local servers = {
   "taplo",
 
   "tsserver",
-  "tailwindcss",
   "eslint",
+  "tailwindcss"
 }
 
 -- lsps with default config

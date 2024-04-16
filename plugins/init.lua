@@ -56,6 +56,9 @@ return {
     {
       "nvimtools/none-ls.nvim",
       event = "VeryLazy",
+       dependencies = {
+        "nvimtools/none-ls-extras.nvim",
+      },
       opts = function ()
         return require "configs.null-ls"
       end
