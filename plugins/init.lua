@@ -17,13 +17,13 @@ return {
   },
 
   {
-  	"williamboman/mason.nvim",
-  	opts = {
-  		ensure_installed = {
-  			"lua-language-server",
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "lua-language-server",
         "stylua",
-  			"html-lsp",
-        "css-lsp" ,
+        "html-lsp",
+        "css-lsp",
 
         "prettier",
 
@@ -31,15 +31,16 @@ return {
         "eslint-lsp",
         "tailwind-css-language-server",
         "typescript-language-server",
-  		},
-  	},
+        "prisma-language-server"
+      },
+    },
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim",
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
         "lua",
         "vimdoc",
         "html",
@@ -49,17 +50,18 @@ return {
         "typescript",
         "jsx",
         "go",
-        "rust"
-  		},
-  	},
+        "rust",
+        "prisma"
+      }
+    },
 
     {
       "nvimtools/none-ls.nvim",
       event = "VeryLazy",
-       dependencies = {
+      dependencies = {
         "nvimtools/none-ls-extras.nvim",
       },
-      opts = function ()
+      opts = function()
         return require "configs.null-ls"
       end
     },
@@ -72,7 +74,7 @@ return {
         "typescript",
         "javascriptreact",
       },
-      opts = function ()
+      opts = function()
         require "nvim-ts-autotag".setup()
       end
     }
@@ -85,5 +87,5 @@ return {
         pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
       }
     end,
-  }
+  },
 }

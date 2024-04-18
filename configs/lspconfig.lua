@@ -18,7 +18,8 @@ local servers = {
 
   "tsserver",
   "eslint",
-  "tailwindcss"
+  "tailwindcss",
+  "prismals"
 }
 
 -- lsps with default config

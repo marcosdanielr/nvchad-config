@@ -4,7 +4,8 @@ local null_ls = require "null-ls"
 local opts = {
   sources = {
     -- null_ls.builtins.formatting.prettierd,
-    require "none-ls.formatting.eslint_d"
+    require "none-ls.formatting.eslint_d",
+    null_ls.builtins.formatting.prismaFmt
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
